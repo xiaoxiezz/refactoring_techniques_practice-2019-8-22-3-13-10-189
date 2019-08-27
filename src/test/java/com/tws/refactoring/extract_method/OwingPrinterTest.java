@@ -4,8 +4,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.event.NamespaceChangeListener;
+import javax.sound.sampled.LineListener;
 
 import static org.junit.Assert.*;
 
@@ -24,9 +30,24 @@ public class OwingPrinterTest {
     }
 
     @Test
-    public void printOwing() {
-//        System.out.print("hello");
-//        assertEquals("hello", outContent.toString());
+    public void should_print_orders_when_print_owing_given_name_as_tom() {
+//given
+    	String name ="tom";
+    	List<Order> orderList=new ArrayList<Order>();
+    	orderList.add(new Order(60));
+    	orderList.add(new Order(6));
+    	
+    	OwingPrinter owingPrinter=new OwingPrinter();
+//    	when
+    	owingPrinter.printOwing(name, orderList);
+//    	then
+    	String resultString="*****************************\r\n"+
+    			"****** Customer totals ******\r\n"+
+    			"*****************************\r\n"+
+    			"name: tom\r\n"+
+    			"amount: 66.0\r\n"
+    			;
+    	assertEquals(resultString, outContent.toString());
     }
     
     

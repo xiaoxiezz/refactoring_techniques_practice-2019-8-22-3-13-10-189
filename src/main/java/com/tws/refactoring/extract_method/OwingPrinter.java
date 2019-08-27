@@ -12,6 +12,7 @@ public class OwingPrinter {
 
         // print banner
        printBanner();
+       
         // print owings
         while (elements.hasNext()) {
             Order each = (Order) elements.next();
@@ -21,6 +22,7 @@ public class OwingPrinter {
         // print details
         printDetails(name, outstanding);
     }
+    
     void printBanner() {
     	 System.out.println ("*****************************");
          System.out.println ("****** Customer totals ******");
