@@ -7,9 +7,9 @@ public class PriceCalculator {
 	}
 	
 	public double getDiscount(int quantity, int itemPrice) {
-		double discountStartPrice=500.0;
+		int discountStartQuantity=500
 		double discountRate = 0.05;
-		double discount = Math.max(0, quantity - discountStartPrice) * itemPrice * discountRate;
+		double discount = Math.max(0, quantity - discountStartQuantity) * itemPrice * discountRate;
 		return discount;
 	}
 	
