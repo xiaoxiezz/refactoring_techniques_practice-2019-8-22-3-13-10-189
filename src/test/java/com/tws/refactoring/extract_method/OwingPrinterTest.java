@@ -10,9 +10,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.naming.event.NamespaceChangeListener;
-import javax.sound.sampled.LineListener;
-
 import static org.junit.Assert.*;
 
 public class OwingPrinterTest {
