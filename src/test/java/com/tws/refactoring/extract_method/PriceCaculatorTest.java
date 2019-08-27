@@ -24,7 +24,7 @@ public class PriceCaculatorTest {
 //		when
 		result = priceCalculator.getPrice(quantity, itemPrice);
 //		then
-		assertEquals(655.0, result,0.01);
+		assertEquals(655.0, result, 0.01);
 	}
 
 }
